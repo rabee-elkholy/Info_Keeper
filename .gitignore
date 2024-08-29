@@ -23,3 +23,5 @@ local.properties
 /.idea/misc.xml
 /.idea/migrations.xml
 /.idea/other.xml
+/.idea/git_toolbox_prj.xml
+/.idea/vcs.xml
