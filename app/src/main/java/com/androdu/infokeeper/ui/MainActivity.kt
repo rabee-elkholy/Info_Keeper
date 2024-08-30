@@ -1,4 +1,4 @@
-package com.androdu.infokeeper
+package com.androdu.infokeeper.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
