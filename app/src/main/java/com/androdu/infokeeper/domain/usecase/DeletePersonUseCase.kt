@@ -16,7 +16,13 @@ class DeletePersonUseCase(private val personRepository: PersonRepository) {
      *
      * @param person The person to delete.
      */
-    suspend operator fun invoke(person: Person) {
-        personRepository.delete(person.toPersonEntity())
+    suspend operator fun invoke(person: Person): Boolean {
+        return try {
+            personRepository.delete(person.toPersonEntity())
+            true
+        } catch (e: Exception) {
+            e.printStackTrace()
+            false
+        }
     }
 }

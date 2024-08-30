@@ -18,6 +18,12 @@ class InsertPersonUseCase(private val personRepository: PersonRepository) {
      * @return `true` if the insert was successful, `false` otherwise.
      */
     suspend operator fun invoke(person: Person): Boolean {
-        return personRepository.insert(person.toPersonEntity())
+        return try {
+            personRepository.insert(person.toPersonEntity())
+            true
+        } catch (e: Exception) {
+            e.printStackTrace()
+            false
+        }
     }
 }

@@ -13,28 +13,25 @@ interface PersonDao {
      * Inserts a person into the database. If the person already exists, it replaces the existing record.
      *
      * @param personEntity PersonEntity object to insert.
-     * @return `true` if the insert was successful, `false` otherwise.
      */
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insert(personEntity: PersonEntity): Boolean
+    suspend fun insert(personEntity: PersonEntity)
 
     /**
      * Updates an existing person in the database.
      *
      * @param personEntity PersonEntity object to update.
-     * @return `true` if the update was successful, `false` otherwise.
      */
     @Update
-    suspend fun update(personEntity: PersonEntity): Boolean
+    suspend fun update(personEntity: PersonEntity)
 
     /**
      * Deletes a person from the database.
      *
      * @param personEntity PersonEntity object to delete.
-     * @return `true` if the delete was successful, `false` otherwise.
      */
     @Delete
-    suspend fun delete(personEntity: PersonEntity): Boolean
+    suspend fun delete(personEntity: PersonEntity)
 
     /**
      * Retrieves all persons from the database.

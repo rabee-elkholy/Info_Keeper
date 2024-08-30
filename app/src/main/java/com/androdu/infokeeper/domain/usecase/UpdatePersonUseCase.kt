@@ -18,6 +18,12 @@ class UpdatePersonUseCase(private val personRepository: PersonRepository) {
      * @return `true` if the update was successful, `false` otherwise.
      */
     suspend operator fun invoke(person: Person): Boolean {
-        return personRepository.update(person.toPersonEntity())
+        return try {
+            personRepository.update(person.toPersonEntity())
+            true
+        } catch (e: Exception) {
+            e.printStackTrace()
+            false
+        }
     }
 }

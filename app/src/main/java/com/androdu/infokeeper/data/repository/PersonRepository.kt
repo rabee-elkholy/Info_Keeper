@@ -7,9 +7,9 @@ import com.androdu.infokeeper.data.room.entity.PersonEntity
  * Interface for managing PersonEntity operations.
  */
 interface PersonRepository {
-    suspend fun insert(personEntity: PersonEntity): Boolean
-    suspend fun update(personEntity: PersonEntity): Boolean
-    suspend fun delete(personEntity: PersonEntity): Boolean
+    suspend fun insert(personEntity: PersonEntity)
+    suspend fun update(personEntity: PersonEntity)
+    suspend fun delete(personEntity: PersonEntity)
     suspend fun getAllPersons(): List<PersonEntity>
 }
 
@@ -26,9 +26,8 @@ class PersonRepositoryImpl(
      * Inserts a person into the database.
      *
      * @param personEntity The person to insert.
-     * @return `true` if the insert was successful, `false` otherwise.
      */
-    override suspend fun insert(personEntity: PersonEntity): Boolean {
+    override suspend fun insert(personEntity: PersonEntity) {
         return personDao.insert(personEntity)
     }
 
@@ -36,9 +35,8 @@ class PersonRepositoryImpl(
      * Updates an existing person in the database.
      *
      * @param personEntity The person to update.
-     * @return `true` if the update was successful, `false` otherwise.
      */
-    override suspend fun update(personEntity: PersonEntity): Boolean {
+    override suspend fun update(personEntity: PersonEntity) {
         return personDao.update(personEntity)
     }
 
@@ -46,9 +44,8 @@ class PersonRepositoryImpl(
      * Deletes a person from the database.
      *
      * @param personEntity The person to delete.
-     * @return `true` if the delete was successful, `false` otherwise.
      */
-    override suspend fun delete(personEntity: PersonEntity): Boolean {
+    override suspend fun delete(personEntity: PersonEntity) {
         return personDao.delete(personEntity)
     }
 
