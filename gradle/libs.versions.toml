@@ -12,6 +12,7 @@ coroutines = "1.8.0"
 koin = "3.5.3"
 ksp = "2.0.0-1.0.22"
 room = "2.6.1"
+annotation = "1.8.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -35,6 +36,8 @@ room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "
 koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
 koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koin" }
 koin-androidx-compose = { group = "io.insert-koin", name = "koin-androidx-compose", version.ref = "koin" }
+annotation = { group = "androidx.annotation", name = "annotation", version.ref = "annotation" }
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
