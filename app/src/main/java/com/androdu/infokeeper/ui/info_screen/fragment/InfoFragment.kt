@@ -128,11 +128,22 @@ class InfoFragment : Fragment(R.layout.fragment_info) {
 
         lifecycleScope.launch {
             viewModel.sideEffect.collect { sideEffect ->
-                if (sideEffect is InfoScreenSideEffect.NavigateToListScreen) {
+                if (sideEffect is InfoScreenSideEffect.NavigateToListScreen && findNavController().currentDestination?.id != R.id.infoListFragment) {
+                    clearFields()
                     findNavController().navigate(R.id.action_infoScreenFragment_to_infoListFragment)
                 }
             }
         }
+    }
+
+    /**
+     * Clears the input fields in the UI.
+     */
+    private fun clearFields() {
+        binding.nameEditText.text?.clear()
+        binding.ageEditText.text?.clear()
+        binding.jobTitleAutoComplete.text?.clear()
+        binding.genderAutoComplete.text?.clear()
     }
 
     /**
