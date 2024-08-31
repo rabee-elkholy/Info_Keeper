@@ -25,8 +25,10 @@ object PersonInfoValidator {
      * @param age The entered age.
      * @return The validation result with an error message if invalid.
      */
-    fun validateAge(age: Int): ValidationResult = when {
-        age == 0 -> ValidationResult(errMessage = R.string.age_cannot_be_zero)
+    fun validateAge(age: String): ValidationResult = when {
+        age.toIntOrNull() == null -> ValidationResult(errMessage = R.string.age_cannot_be_empty)
+        age.toInt() == 0 -> ValidationResult(errMessage = R.string.age_cannot_be_zero)
+        age.toInt() > 100 -> ValidationResult(errMessage = R.string.age_too_high)
         else -> ValidationResult(isValid = true)
     }
 

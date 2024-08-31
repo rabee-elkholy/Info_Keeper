@@ -1,4 +1,4 @@
-package com.androdu.infokeeper.ui.info_screen
+package com.androdu.infokeeper.ui_compose.info_screen
 
 import androidx.annotation.StringRes
 import com.androdu.infokeeper.R
@@ -13,14 +13,16 @@ import com.androdu.infokeeper.domain.utils.JobTitle
  * @param jobTitle The selected job title.
  * @param gender The selected gender.
  * @param infoValidationState The validation state of the form inputs.
+ * @param isLoading Indicates whether the screen is currently loading.
  * @param infoSaved Indicates whether the info has been successfully saved.
  */
 data class InfoScreenState(
     val name: String = "",
-    val age: Int = 0,
+    val age: String = "",
     val jobTitle: JobTitle = JobTitle.NOT_SELECTED,
     val gender: Gender = Gender.NOT_SELECTED,
     val infoValidationState: InfoValidationState = InfoValidationState(),
+    val isLoading: Boolean = false,
     val infoSaved: Boolean = false,
     @StringRes val error: Int = R.string.empty
 )

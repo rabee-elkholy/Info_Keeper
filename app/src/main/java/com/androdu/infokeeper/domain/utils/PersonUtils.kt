@@ -24,7 +24,7 @@ enum class JobTitle {
      * @return The string resource ID.
      */
     fun getStringRes(): Int = when (this) {
-        NOT_SELECTED -> R.string.not_selected
+        NOT_SELECTED -> R.string.empty
         ANDROID_DEVELOPER -> R.string.android_developer
         IOS_DEVELOPER -> R.string.ios_developer
         FRONTEND_DEVELOPER -> R.string.frontend_developer
@@ -52,7 +52,7 @@ enum class Gender {
      * @return The string resource ID.
      */
     fun getStringRes(): Int = when (this) {
-        NOT_SELECTED -> R.string.not_selected
+        NOT_SELECTED -> R.string.empty
         MALE -> R.string.male
         FEMALE -> R.string.female
     }

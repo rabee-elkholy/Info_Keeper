@@ -1,4 +1,4 @@
-package com.androdu.infokeeper.ui.info_screen
+package com.androdu.infokeeper.ui_compose.info_screen
 
 import com.androdu.infokeeper.domain.utils.Gender
 import com.androdu.infokeeper.domain.utils.JobTitle
@@ -14,5 +14,5 @@ sealed interface InfoScreenAction {
      * @param jobTitle The selected job title.
      * @param gender The selected gender.
      */
-    data class OnSaveClick(val name: String, val age: Int, val jobTitle: JobTitle, val gender: Gender) : InfoScreenAction
+    data class OnSaveClick(val name: String, val jobTitle: JobTitle, val age: String, val gender: Gender) : InfoScreenAction
 }
