@@ -9,10 +9,7 @@ InfoKeeper is an Android application designed to manage personal information. It
      - **Open Compose**: Launches the Compose-based implementation of the Info Screen and Info List.
      - **Open Views**: Launches the XML-based implementation of the Info Screen and Info List.
 
-2. **Info List**:
-   - **Functionality**: Displays a list of all persons stored in the database. Users can delete individual entries from this list.
-
-3. **Info Screen**:
+2. **Info Screen**:
    - **Functionality**: Allows users to enter personal information including name, job title, age, and gender. This data is saved to a Room database when the "Save" button is clicked.
    - **Validation**: Includes form validation to ensure that inputs are valid before saving.
    - **Components**:
@@ -22,6 +19,9 @@ InfoKeeper is an Android application designed to manage personal information. It
      - **Gender**:
        - Jetpack Compose: Implemented using `DropDownMenu`.
        - XML: Implemented using `AutoComplete`.
+3. **Info List**:
+   - **Functionality**: Displays a list of all persons stored in the database. Users can delete individual entries from this list.
+
 
 ## Technologies Used
 
