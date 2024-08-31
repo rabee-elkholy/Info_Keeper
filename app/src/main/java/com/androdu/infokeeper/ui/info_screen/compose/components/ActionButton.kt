@@ -1,4 +1,4 @@
-package com.androdu.infokeeper.ui_compose.info_screen.components
+package com.androdu.infokeeper.ui.info_screen.compose.components
 
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.layout.Box

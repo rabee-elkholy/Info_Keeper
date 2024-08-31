@@ -13,6 +13,7 @@ import com.androdu.infokeeper.domain.utils.JobTitle
  * @property age Age of the person.
  * @property jobTitle Job title of the person.
  * @property gender Gender of the person.
+ * @property avatar Avatar resource ID of the person.
  */
 @Entity(tableName = "person_table")
 data class PersonEntity(
@@ -20,5 +21,6 @@ data class PersonEntity(
     val name: String,
     val age: Int,
     val jobTitle: JobTitle,
-    val gender: Gender
+    val gender: Gender,
+    val avatar: Int
 )

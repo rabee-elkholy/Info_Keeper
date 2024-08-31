@@ -1,4 +1,4 @@
-package com.androdu.infokeeper.ui_compose.info_screen.components
+package com.androdu.infokeeper.ui.info_screen.compose.components
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.DropdownMenuItem
@@ -81,6 +81,12 @@ fun <T> DynamicSelectTextField(
     }
 }
 
+/**
+ * Retrieves the string resource ID for the option name based on its type.
+ *
+ * @param option The option for which to get the string resource ID.
+ * @return The string resource ID corresponding to the option name.
+ */
 private fun <T> getOptionNameRes(option: T): Int = when (option) {
     is JobTitle -> option.getStringRes()
     is Gender -> option.getStringRes()

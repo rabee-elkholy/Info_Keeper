@@ -18,26 +18,18 @@ interface PersonDao {
     suspend fun insert(personEntity: PersonEntity)
 
     /**
-     * Updates an existing person in the database.
-     *
-     * @param personEntity PersonEntity object to update.
-     */
-    @Update
-    suspend fun update(personEntity: PersonEntity)
-
-    /**
      * Deletes a person from the database.
      *
-     * @param personEntity PersonEntity object to delete.
+     * @param id PersonEntity id object to delete.
      */
-    @Delete
-    suspend fun delete(personEntity: PersonEntity)
+    @Query("DELETE FROM person_table WHERE id = :id")
+    suspend fun delete(id: Int)
 
     /**
      * Retrieves all persons from the database.
      *
-     * @return List of all PersonEntity objects in the database.
+     * @return List of all PersonEntity objects in the database sorted by id in descending order.
      */
-    @Query("SELECT * FROM person_table")
-    fun getAllPersons(): List<PersonEntity>
+    @Query("SELECT * FROM person_table ORDER BY id DESC")
+    suspend fun getAllPersons(): List<PersonEntity>
 }

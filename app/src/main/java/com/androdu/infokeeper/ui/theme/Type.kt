@@ -1,4 +1,4 @@
-package com.androdu.infokeeper.ui_compose.theme
+package com.androdu.infokeeper.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.graphics.Color.Companion.Gray

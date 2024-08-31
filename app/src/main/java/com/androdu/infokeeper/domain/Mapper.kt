@@ -13,7 +13,8 @@ fun Person.toPersonEntity(): PersonEntity = PersonEntity(
     name = name,
     age = age,
     jobTitle = jobTitle,
-    gender = gender
+    gender = gender,
+    avatar = avatar
 )
 
 /**
@@ -26,5 +27,6 @@ fun PersonEntity.toPerson(): Person = Person(
     name = name,
     age = age,
     jobTitle = jobTitle,
-    gender = gender
+    gender = gender,
+    avatar = avatar
 )

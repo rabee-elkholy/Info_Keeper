@@ -1,4 +1,4 @@
-package com.androdu.infokeeper.ui_compose.info_screen
+package com.androdu.infokeeper.ui.info_screen
 
 import com.androdu.infokeeper.domain.utils.Gender
 import com.androdu.infokeeper.domain.utils.JobTitle

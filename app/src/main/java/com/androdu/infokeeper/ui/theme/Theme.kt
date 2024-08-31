@@ -1,4 +1,4 @@
-package com.androdu.infokeeper.ui_compose.theme
+package com.androdu.infokeeper.ui.theme
 
 import android.app.Activity
 import androidx.compose.material3.MaterialTheme
