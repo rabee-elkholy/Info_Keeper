@@ -8,7 +8,7 @@ import com.androdu.infokeeper.domain.usecase.DeletePersonUseCase
 import com.androdu.infokeeper.domain.usecase.GetAllPersonsUseCase
 import com.androdu.infokeeper.domain.usecase.InsertPersonUseCase
 import com.androdu.infokeeper.domain.usecase.UpdatePersonUseCase
-import com.androdu.infokeeper.ui.info_screen.InfoViewModel
+import com.androdu.infokeeper.ui_compose.info_screen.InfoViewModel
 import org.koin.android.ext.koin.androidContext
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
