@@ -43,7 +43,7 @@ data class Person(
  *         - For `Gender.FEMALE`: Returns a random image from `femaleImages`.
  *         - For any other gender or if the gender is not specified: Returns `R.drawable.person`.
  */
-private fun getRandomImage(gender: Gender): Int {
+fun getRandomImage(gender: Gender): Int {
     val maleImages = listOf(R.drawable.ic_man_1, R.drawable.ic_man_2, R.drawable.ic_man_3)
     val femaleImages = listOf(R.drawable.ic_woman_1, R.drawable.ic_woman_2, R.drawable.ic_woman_3)
     return when (gender) {
