@@ -15,6 +15,13 @@ InfoKeeper is an Android application designed to manage personal information. It
 3. **Info Screen**:
    - **Functionality**: Allows users to enter personal information including name, job title, age, and gender. This data is saved to a Room database when the "Save" button is clicked.
    - **Validation**: Includes form validation to ensure that inputs are valid before saving.
+   - **Components**:
+     - **Job Title**: 
+       - Jetpack Compose: Implemented using `DropDownMenu`.
+       - XML: Implemented using `AutoComplete`.
+     - **Gender**:
+       - Jetpack Compose: Implemented using `DropDownMenu`.
+       - XML: Implemented using `AutoComplete`.
 
 ## Technologies Used
 
@@ -43,6 +50,9 @@ InfoKeeper is an Android application designed to manage personal information. It
   - Save button for storing data in the Room database.
   - Validation messages for input errors.
   - Implemented using Jetpack Compose and XML.
+  - **Job Title and Gender**:
+    - Compose: `DropDownMenu` for selecting job title and gender.
+    - XML: `AutoComplete` for selecting job title and gender.
 
 ### Screenshots
 
@@ -52,14 +62,12 @@ InfoKeeper is an Android application designed to manage personal information. It
 #### XML Implementation
 <img src="https://drive.google.com/uc?export=view&id=1Bhxr1rTTgAOAWeycWuxLrDq1bCFq58KF" width="400" alt="XML Info Screen">
 
-
 ### Info List
 
 - **Purpose**: Display and manage a list of all persons stored in the database.
 - **Components**:
   - List of persons with a delete option for each entry.
   - Implemented using Jetpack Compose and XML.
-
 
 ### Screenshots
 
