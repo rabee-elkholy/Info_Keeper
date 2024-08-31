@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/infoFragment">
+
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.androdu.infokeeper.ui.info_screen.fragment.InfoFragment"
+        android:label="InfoFragment"
+        tools:layout="@layout/fragment_info">
+        <action
+            android:id="@+id/action_infoScreenFragment_to_infoListFragment"
+            app:destination="@id/infoListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoListFragment"
+        android:name="com.androdu.infokeeper.ui.info_list_screen.fragment.InfoListFragment"
+        android:label="fragment_info_list"
+        tools:layout="@layout/fragment_info_list" />
+</navigation>

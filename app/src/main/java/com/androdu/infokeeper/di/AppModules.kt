@@ -7,8 +7,8 @@ import com.androdu.infokeeper.data.room.PersonDatabase
 import com.androdu.infokeeper.domain.usecase.DeletePersonUseCase
 import com.androdu.infokeeper.domain.usecase.GetAllPersonsUseCase
 import com.androdu.infokeeper.domain.usecase.InsertPersonUseCase
-import com.androdu.infokeeper.domain.usecase.UpdatePersonUseCase
-import com.androdu.infokeeper.ui_compose.info_screen.InfoViewModel
+import com.androdu.infokeeper.ui.info_list_screen.InfoListViewModel
+import com.androdu.infokeeper.ui.info_screen.InfoViewModel
 import org.koin.android.ext.koin.androidContext
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
@@ -39,7 +39,6 @@ val repositoryModule = module {
  */
 val useCaseModule = module {
     factory { InsertPersonUseCase(get()) }
-    factory { UpdatePersonUseCase(get()) }
     factory { DeletePersonUseCase(get()) }
     factory { GetAllPersonsUseCase(get()) }
 }
@@ -49,6 +48,7 @@ val useCaseModule = module {
  */
 val viewModelModule = module {
     viewModel { InfoViewModel(get()) }
+    viewModel { InfoListViewModel(get(), get()) }
 }
 
 /**

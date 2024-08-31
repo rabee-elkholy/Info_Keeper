@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
+        android:name=".InfoKeeperApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -10,14 +11,23 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:name=".InfoKeeperApp"
-        android:theme="@style/Theme.InfoKeeper"
-        tools:targetApi="31">
+        tools:targetApi="34">
         <activity
-            android:name=".ui_compose.MainActivity"
+            android:name=".ui.ViewsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.InfoKeeper.Views"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name=".ui.ComposeActivity"
+            android:exported="false"
+            android:theme="@style/Theme.InfoKeeper.Compose"
+            android:windowSoftInputMode="adjustResize"/>
+
+        <activity
+            android:name=".ui.MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.InfoKeeper">
+            android:theme="@style/Theme.InfoKeeper.Views"
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
