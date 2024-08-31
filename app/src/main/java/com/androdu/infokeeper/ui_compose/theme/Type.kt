@@ -1,6 +1,7 @@
-package com.androdu.infokeeper.ui.theme
+package com.androdu.infokeeper.ui_compose.theme
 
 import androidx.compose.material3.Typography
+import androidx.compose.ui.graphics.Color.Companion.Gray
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
@@ -71,5 +72,5 @@ val Typography = Typography(
         fontWeight = FontWeight.SemiBold,
         fontSize = 24.sp,
         color = White
-    ),
+    )
 )

@@ -3,6 +3,7 @@
     <string name="name_cannot_be_empty">Name cannot be empty!</string>
     <string name="name_too_long">"Name cannot be more than 20 characters!"</string>
     <string name="empty" />
+    <string name="age_cannot_be_empty">Age cannot be empty!</string>
     <string name="age_cannot_be_zero">Age cannot be zero!</string>
     <string name="age_too_high">Age cannot be more than 100!</string>
     <string name="job_title_cannot_be_empty">Job title cannot be empty!</string>
@@ -23,4 +24,9 @@
     <string name="gender_cannot_be_empty">Gender cannot be empty!</string>
     <string name="not_selected">Not Selected</string>
     <string name="general_error">Something went wrong, Please try again!</string>
+    <string name="name">Name</string>
+    <string name="job_title">Job Title</string>
+    <string name="age">Age</string>
+    <string name="gender">Gender</string>
+    <string name="save">Save</string>
 </resources>
