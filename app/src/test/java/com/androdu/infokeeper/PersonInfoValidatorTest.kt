@@ -10,7 +10,6 @@ import com.androdu.infokeeper.domain.utils.JobTitle
 import org.junit.Test
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotNull
-import kotlin.random.Random
 
 /**
  * Unit tests for the extension functions converting between [Person] and [PersonEntity],
